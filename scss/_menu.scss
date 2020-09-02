@@ -1,0 +1,33 @@
+//this is the menu btn scss
+.menu-btn {
+    position: absolute;
+    z-index: 3;
+    top: 35px;
+    right: 35px;
+    cursor: pointer;
+    @include easeOut;
+    //create a 3line menu bar
+    .btn-line {
+        width: 20px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: white;
+        @include easeOut;
+    }
+    //change the menu bar link into an "x"
+    &.close {
+        transform: rotate(180deg);
+        .btn-line {
+            //rotate line 1, hide line 2, rotate line 3
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px)
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(11px, -6px)
+            }
+        }
+    }
+}
