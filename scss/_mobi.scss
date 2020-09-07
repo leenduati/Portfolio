@@ -44,6 +44,10 @@
             justify-content: center;
             transition-delay: 0.1s;
         }
+        .about-info {
+            grid-template-areas: "bio-image""bio""myCv""myDocuments";
+            grid-template-columns: 1fr;
+        }
     }
 }
 
@@ -53,3 +57,13 @@
         margin-top: 10vh;
     }
 }
+
+//set text colour
+// //@function setTextColour($colour) {
+//     @if(lightness($colour) < 40) {
+//         @return black;
+//     }
+//     @else {
+//         @return white;
+//     }
+// }

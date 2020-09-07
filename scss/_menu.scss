@@ -103,7 +103,7 @@
     .nav-link {
         display: inline-block;
         position: relative;
-        color: whitesmoke;
+        color: setTextColour($primary-colour);
         font-size: xx-large;
         font-weight: 400;
         padding: 10px;

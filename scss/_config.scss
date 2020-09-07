@@ -1,8 +1,9 @@
-$primary-colour: #444;
+$primary-colour: rgb(32, 32, 32);
 $text-color: rgb(155, 155, 31);
 $home-image: url(../Images/background.jpg);
 $is-image-there: true;
 $opacity: 0.7;
+$about-image: url(../Images/background.jpg);
 @mixin easeOut {
     transition: all 1s ease-out;
 }

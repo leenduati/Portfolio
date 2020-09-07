@@ -1,6 +1,5 @@
 @import "config";
 @import "menu";
-@import "mobi";
 * {
     box-sizing: border-box;
 }
@@ -8,7 +7,7 @@
 body {
     @include backgroundPic();
     background: $primary-colour;
-    color: whitesmoke;
+    color: white;
     height: 100%;
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -64,4 +63,66 @@ main {
             margin-top: 20vh;
         }
     }
+    .about-info {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-areas: "bio-image bio bio" "downloadCV downloadDoc downloadDoc";
+        grid-template-columns: repeat(3, 1fr);
+        .fa-download {
+            background-color: dodgerblue;
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-size: 15px;
+            &:hover {
+                background-color: royalblue;
+            }
+        }
+    }
+    .bio-image {
+        grid-area: bio-image;
+        margin: auto;
+        border-radius: 50%;
+        border: 2px solid $text-color;
+    }
+    .bio {
+        grid-area: bio;
+    }
+    .downloadCV {
+        grid-area: downloadCV;
+        @include easeOut();
+        color: $text-color;
+    }
+    .downloadDoc {
+        grid-area: downloadDoc;
+        @include easeOut();
+        color: $text-color;
+    }
+    .leeStuff {
+        display: flex;
+        padding: 10px;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    .myCV,
+    .myDocuments {
+        background: lighten($primary-colour, 5);
+        width: 200px;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+    }
 }
+
+#mainFooter {
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-colour, 10);
+    color: setTextColour($primary-colour);
+    height: 60px;
+}
+
+@import "mobi";
