@@ -127,13 +127,48 @@
            }
        }
    }
+ @include small {
+               body {
+                   background-size: cover;
+                   align-items: center;
+                   text-align: center;
+               }
+               main#home h1 {
+                   margin-top: 10vh;
+               }
+               main#about {
+                   height: 100vh;
+                   padding: auto;
+               }
+               main#work {
+                   .slider-container {
+                       justify-items: center;
+                       align-content: center;
+                       align-items: center;
+                       display: flex;
+                       justify-content: center;
+                       padding: auto;
+                       margin: auto;
+                   }
+                   img {
+                       width: 80vh;
+                       height: 100vh;
+                   }
+               }
+           }
+           
+           set text colour
+           @function setTextColour($colour) {
+                @if(lightness($colour) < 40) {
+                    @return black;
+                }
+                @else {
+                    @return white;
+              }
+            }
    
    //smartphones
-   @include small {
-       main#home h1 {
-           margin-top: 10vh;
-       }
-   }
+   
    
    //set text colour
    // //@function setTextColour($colour) {
