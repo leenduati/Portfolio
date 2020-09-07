@@ -157,7 +157,7 @@
                }
            }
            
-           set text colour
+           //set text colour
            @function setTextColour($colour) {
                 @if(lightness($colour) < 40) {
                     @return black;
