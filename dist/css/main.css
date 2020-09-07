@@ -194,6 +194,24 @@ main {
     text-align: center;
     align-items: center;
     justify-content: space-around; }
+  main#work img .image {
+    height: auto;
+    width: 200px;
+    transition: all 3s ease-in-out; }
+  main#work .slider-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: auto;
+    justify-items: center;
+    justify-content: center;
+    transition: all 3s ease-in-out;
+    text-align: center; }
+  main#work slide h1 {
+    font-size: 5rem; }
+  main#work .btn-container {
+    padding: 10px;
+    margin: 10px; }
 
 #mainFooter {
   text-align: center;
@@ -201,6 +219,50 @@ main {
   background: #070707;
   color: setTextColour(#202020);
   height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  main#work .slider-container {
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    padding: auto;
+    margin: auto; }
+  main#work img {
+    width: 80vh;
+    height: 100vh; }
+  main#work .btn-container {
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: auto;
+    width: 50%; } }
+
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  main#work .slider-container {
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    padding: auto;
+    margin: auto; }
+  main#work img {
+    width: 80vh;
+    height: 100vh; }
+  main#work .btn-container {
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: auto;
+    width: 50%; } }
 
 @media screen and (max-width: 768px) {
   body {
@@ -240,7 +302,27 @@ main {
       transition-delay: 0.1s; }
     body .about-info {
       grid-template-areas: "bio-image" "bio" "myCv" "myDocuments";
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr; }
+    body main#work .slider-container {
+      justify-items: center;
+      align-content: center;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      padding: auto;
+      margin: auto; }
+    body main#work img {
+      width: 80vh;
+      height: 100vh; }
+    body main#work .btn-container {
+      justify-items: center;
+      align-content: center;
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      margin: auto;
+      width: 50%; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
