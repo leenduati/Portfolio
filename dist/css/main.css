@@ -282,7 +282,7 @@ main {
     margin: auto;
     width: 50%; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 501px) and (max-width: 768px) {
   body {
     align-items: center;
     text-align: center; }
@@ -343,5 +343,23 @@ main {
       width: 50%; } }
 
 @media screen and (max-width: 500px) {
+  body {
+    background-size: cover;
+    align-items: center;
+    text-align: center; }
   main#home h1 {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  main#about {
+    height: 100vh;
+    padding: auto; }
+  main#work .slider-container {
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: auto;
+    margin: auto; }
+  main#work img {
+    width: 400px;
+    height: 400px; } }
