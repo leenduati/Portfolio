@@ -51,3 +51,22 @@ $about-image: url(../Images/background.jpg);
         @content;
     }
 }
+
+@keyframes menuBTN {
+    from {
+        border-color: white;
+    }
+    to {
+        border-color: $text-color;
+    }
+}
+
+//set text colour
+@function setTextColour($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    }
+    @else {
+        @return #fff;
+    }
+}

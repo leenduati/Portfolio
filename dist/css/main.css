@@ -1,10 +1,18 @@
+@keyframes menuBTN {
+  from {
+    border-color: white; }
+  to {
+    border-color: #9b9b1f; } }
+
 .menu-btn {
   position: absolute;
   z-index: 3;
   top: 35px;
   right: 35px;
   cursor: pointer;
-  transition: all 1s ease-out; }
+  transition: all 1s ease-out;
+  animation-name: menuBTN;
+  animation-duration: infinite; }
   .menu-btn .btn-line {
     width: 20px;
     height: 3px;
@@ -12,7 +20,10 @@
     background: white;
     transition: all 1s ease-out; }
   .menu-btn.close {
-    transform: rotate(180deg); }
+    transform: rotate(180deg);
+    border: 2px solid #fff;
+    border-radius: 50px;
+    padding: 20px; }
     .menu-btn.close .btn-line:nth-child(1) {
       transform: rotate(45deg) translate(5px); }
     .menu-btn.close .btn-line:nth-child(2) {
@@ -76,7 +87,7 @@
   .menu .nav-link {
     display: inline-block;
     position: relative;
-    color: setTextColour(#202020);
+    color: #fff;
     font-size: xx-large;
     font-weight: 400;
     padding: 10px;
@@ -227,15 +238,15 @@ main {
       main#contact .boxes div:hover {
         padding: 0.5rem 1.5rem;
         background-color: #142b3d;
-        color: setTextColour(#202020); }
+        color: #fff; }
         main#contact .boxes div:hover span {
-          color: setTextColour(#202020); }
+          color: #fff; }
 
 #mainFooter {
   text-align: center;
   padding: 1rem;
   background: #070707;
-  color: setTextColour(#202020);
+  color: #fff;
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
