@@ -7,7 +7,7 @@
 body {
     @include backgroundPic();
     background: $primary-colour;
-    color: white;
+    color: setTextColour($primary-colour);
     height: 100%;
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -117,9 +117,9 @@ main {
     }
     &#work {
         img {
-            .image {
-                height: auto;
-                width: 200px;
+            &.image {
+                height: 500px;
+                width: 500px;
                 transition: all 3s ease-in-out;
             }
         }
@@ -137,8 +137,14 @@ main {
             font-size: 5rem;
         }
         .btn-container {
+            justify-items: center;
+            align-content: center;
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
             padding: 10px;
-            margin: 10px;
+            margin: auto;
+            width: 50%;
         }
     }
     &#contact {

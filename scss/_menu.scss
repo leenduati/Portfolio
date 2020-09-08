@@ -7,13 +7,13 @@
     cursor: pointer;
     @include easeOut;
     animation-name: menuBTN;
-    animation-duration: infinite;
+    animation-duration: 10s;
     //create a 3line menu bar
     .btn-line {
-        width: 20px;
+        width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
-        background: white;
+        background: setTextColour($primary-colour);
         @include easeOut;
     }
     //change the menu bar link into an "x"
