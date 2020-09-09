@@ -256,6 +256,35 @@ main {
   height: 60px; }
 
 @media screen and (max-width: 800px) {
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+    ul.menu-nav.menu-branding,
+    div.menu-branding.menu-branding {
+      height: 30vh;
+      transform: translate3d(0, 0, 0); }
+      ul.menu-nav.menu-branding .potrait,
+      div.menu-branding.menu-branding .potrait {
+        background-image: url(../Images/potrait.jpg);
+        border-radius: 50%;
+        border: 1px solid #9b9b1f;
+        width: 175px;
+        height: 175px;
+        background-size: cover; }
+  .menu-nav {
+    height: 70vh;
+    transform: translate3d(100%, 0, 0);
+    font-size: 24px;
+    margin-top: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition-delay: 0.1s; }
   main {
     padding: 2rem; }
     main#home h1 {
@@ -289,3 +318,38 @@ main {
       main#work .slider-container img.image {
         width: 300px;
         height: 300px; } }
+
+@media screen and (max-width: 350px) {
+  main {
+    padding: 2rem; }
+    main#home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+    main#about {
+      padding-right: auto;
+      overflow: hidden;
+      position: relative;
+      height: 80%;
+      width: 100%; }
+      main#about .about-info {
+        grid-template-areas: "bio-image" "bio" "myCv" "myDocuments";
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        margin-right: 10px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        justify-items: center; }
+    main#work .slider-container {
+      justify-items: center;
+      align-content: center;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      padding: auto;
+      margin: auto; }
+      main#work .slider-container img.image {
+        width: 100px;
+        height: 100px; } }
