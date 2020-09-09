@@ -122,3 +122,172 @@
             }
         }
     }
+    
+    @include largebody {
+        @include backgroundPic();
+        background: $primary-colour;
+        color: setTextColour($primary-colour);
+        height: 100%;
+        margin: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        line-height: 1.5;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        margin: 0;
+        font-weight: 400;
+        &.lg-heading {
+            font-size: 6rem;
+        }
+        &.sm-heading {
+            margin-bottom: 2rem;
+            padding: 0.2rem 1rem;
+            background: rgba(lighten($primary-colour, 2), 0.5)
+        }
+    }
+    
+    html body a {
+        color: beige;
+        text-decoration: none;
+    }
+    
+    header {
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+    }
+    
+    .text-secondary {
+        color: $text-color
+    }
+    
+    main {
+        padding: 4rem;
+        height: 100%;
+        .icons {
+            margin-top: 1rem;
+            a {
+                padding: 0.4rem;
+                &:hover {
+                    color: $text-color;
+                    @include easeOut();
+                }
+            }
+        }
+        &#home {
+            overflow: hidden;
+            h1 {
+                margin-top: 20vh;
+            }
+        }
+        .about-info {
+            display: grid;
+            grid-gap: 30px;
+            grid-template-areas: "bio-image bio bio""downloadCV downloadDoc downloadDoc";
+            grid-template-columns: repeat(3, 1fr);
+            .fa-download {
+                background-color: dodgerblue;
+                border: none;
+                color: white;
+                padding: 12px 30px;
+                cursor: pointer;
+                font-size: 15px;
+                &:hover {
+                    background-color: royalblue;
+                }
+            }
+        }
+        .bio-image {
+            grid-area: bio-image;
+            margin: auto;
+            border-radius: 50%;
+            border: 2px solid $text-color;
+        }
+        .bio {
+            grid-area: bio;
+        }
+        .downloadCV {
+            grid-area: downloadCV;
+            @include easeOut();
+            color: $text-color;
+        }
+        .downloadDoc {
+            grid-area: downloadDoc;
+            @include easeOut();
+            color: $text-color;
+        }
+        .leeStuff {
+            display: flex;
+            padding: 10px;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+        .myCV,
+        .myDocuments {
+            background: lighten($primary-colour, 5);
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            align-items: center;
+            justify-content: space-around;
+        }
+        &#work {
+            img {
+                &.image {
+                    height: 500px;
+                    width: 500px;
+                    transition: all 3s ease-in-out;
+                }
+            }
+            .slider-container {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex: auto;
+                justify-items: center;
+                justify-content: center;
+                transition: all 3s ease-in-out;
+                text-align: center;
+            }
+            slide h1 {
+                font-size: 5rem;
+            }
+            .btn-container {
+                justify-items: center;
+                align-content: center;
+                align-items: center;
+                display: flex;
+                justify-content: space-around;
+                padding: 10px;
+                margin: auto;
+                width: 50%;
+            }
+        }
+        &#contact {
+            .boxes {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                align-items: center;
+                margin-top: 1rem;
+                div {
+                    font-size: 2rem;
+                    border: 3px white solid;
+                    padding: 1.5rem 2.5rem;
+                    margin-bottom: 3rem;
+                    @include easeOut();
+                    &:hover {
+                        padding: 0.5rem 1.5rem;
+                        background-color: rgb(20, 43, 61);
+                        color: setTextColour($primary-colour);
+                        span {
+                            color: setTextColour($primary-colour);
+                        }
+                    }
+                }
+            }
+        }
+    }
