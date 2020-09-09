@@ -17,13 +17,11 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
-    color: #fff;
+    background: white;
     transition: all 1s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg);
     border: 2px solid #fff;
-    color: #fff;
     border-radius: 50px;
     padding: 20px; }
     .menu-btn.close .btn-line:nth-child(1) {
